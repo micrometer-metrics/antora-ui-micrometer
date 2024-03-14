@@ -38,12 +38,12 @@
   --color-accent-1: #ebf2f2;
   --color-accent-1-hover: #d3dddd;
   --color-accent-2: #d7e7e7;
-  --color-accent-3: #6db33f;
-  --body-font-color: #191e1e;
+  --color-accent-3: rgb(27, 168, 156);
   --body-font-light-color: #273030;
   --body-font-dark-color: #141818;
   --link-font-color: #1565c0;
   --link_hover-font-color: #104d92;
+
   --code-link-font-color: var(--link-font-color);
   --scrollbar-thumb-color: silver;
   --mark-background-color: #80ea6e;
@@ -126,8 +126,31 @@
   --social-icon-circle: #191e1e;
 
   /* Navbar */
-  --navbar-background: var(--body-background-color);
-  --navbar-font-color: #var(--body-font-color);
+  --navbar-background: rgb(33, 37, 41);
+  --navbar-font-color: #191e1e;
+
+  
+  --mark-background-color: rgb(27, 168, 156);
+  --selected-background-color: #191e1e;
+  
+  /* fonts */
+  --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
+  --body-font-size: 1.0625em; /* 17px */
+  --body-font-size--desktop: 1.125em; /* 18px */
+  --body-font-size--print: 0.9375em; /* 15px */
+  --body-line-height: 1.15;
+  --body-font-color: #191e1e;
+  --body-font-family: "Open Sans", sans;
+  --body-font-weight-bold: 600;
+  --monospace-font-weight-bold: 600;
+  
+  /* base */
+  --body-background: var(--color-white);
+  --panel-background: var(--color-smoke-30);
+  --panel-border-color: var(--color-smoke-90);
+  --scrollbar-thumb-color: var(--color-gray-10);
+
+  
   --navbar_hover-background: var(--navbar-background);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
