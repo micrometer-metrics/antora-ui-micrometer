@@ -44,6 +44,10 @@ footer.footer #social-icons {
   border-color: #1ba89c;
 }
 
+.breadcrumbs ul {
+  padding: 0;
+}
+
 footer #social-icons a:hover svg .cls-1 {
   fill: #1ba89c;
 }
