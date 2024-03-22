@@ -1,98 +1,123 @@
 antoraVersion: '3.1.2'
 asciidoc:
   extensions:
+  # TIP uncomment the next line to switch to Asciidoctor Tabs
+  - '@asciidoctor/tabs'
   - '@springio/asciidoctor-extensions'
 site:
   url: http://localhost:5252
-  title: Micrometer
+  title: Spring
   homeUrl: /index.html
   components:
-  - name: micrometer
-    title: &component_title Micrometer
+  - name: foobar
+    title: &component_title Spring Foobar
     url: '#'
-    versions: &micrometer_versions
-    - &micrometer_latest_version
+    versions: &foobar_versions
+    - &foobar_latest_version
       url: '/index.html'
-      version: '6.1.0'
-      displayVersion: '6.1.0'
+      version: '2.0.0'
+      displayVersion: '2.0.0'
       title: *component_title
-      versionSegment: '5.6'
-    - &micrometer_5_5_version
-      url: '/5.5/index.html'
-      version: '5.5.9'
-      displayVersion: '5.5.9'
-      versionSegment: '5.5'
-    latest: *micrometer_latest_version
+      versionSegment: '2.0'
+    - &foobar_1_0_version
+      url: '/1.0/index.html'
+      version: '1.0.0'
+      displayVersion: '1.0.0'
+      versionSegment: '1.0'
+    latest: *foobar_latest_version
+  - name: baz
+    title: &baz_component_title Spring Baz
+    url: '#'
+    versions:
+      - &baz_latest_version
+        url: '/baz/index.html'
+        version: '1.0.0'
+        displayVersion: '1.0.0'
+        title: *baz_component_title
+        versionSegment: '1.0'
+    latest: *baz_latest_version
 shared:
-  micrometer:
-    5.5.9:
+  foobar:
+    1.0.0:
       home: true
-      title: Micrometer
+      title: Spring Foobar
       relativeSrcPath: index.adoc
       editUrl: http://example.com/project-xyz/blob/master/index.adoc
       component:
-        title: Micrometer
+        title: Spring Foobar
         url: '#'
         versions:
           - url: '/index.html'
-            version: '6.1.0'
-            displayVersion: '6.1.0'
+            version: '2.0.0'
+            displayVersion: '2.0.0'
             title: *component_title
-            versionSegment: '5.6'
-          - url: '/5.5/index.html'
-            version: '5.5.9'
-            displayVersion: '5.5.9'
-            versionSegment: '5.5'
-      componentVersion: *micrometer_5_5_version
+            versionSegment: '2.0'
+          - url: '/1.0/index.html'
+            version: '1.0.0'
+            displayVersion: '1.0.0'
+            versionSegment: '1.0'
+      componentVersion: *foobar_1_0_version
       versions:
-        - version: '6.1.0'
-          displayVersion: '6.1.0'
+        - version: '2.0.0'
+          displayVersion: '2.0.0'
           url: '#'
-          versionSegment: '5.6'
-        - version: '5.5.9'
-          displayVersion: '5.5.9'
-          versionSegment: '5.5'
+          versionSegment: ''
+        - version: '1.0.0'
+          displayVersion: '1.0.0'
+          versionSegment: '1.0'
           url: '#'
       navigation:
         - root: true
           items:
             - content: Overview
-              url: '/5.5/index.html'
-            - content: Features
-              url: '#'
-              items:
-                - content: Authentication
-                  url: '#'
-                - content: Protection Against Exploits
-                  url: '#'
-    6.1.0:
+              url: '/1.0/index.html'
+    2.0.0:
       home: true
-      title: Micrometer
+      title: Spring Foobar
       relativeSrcPath: index.adoc
       editUrl: http://example.com/project-xyz/blob/master/index.adoc
       component:
-        title: &component_title Micrometer
+        title: &component_title Spring Foobar
         url: '#'
-        versions: *micrometer_versions
-      componentVersion: *micrometer_latest_version
+        versions: *foobar_versions
+      componentVersion: *foobar_latest_version
       versions:
-        - version: '6.1.0'
-          displayVersion: '6.1.0'
+        - version: '2.0.0'
+          displayVersion: '2.0.0'
           url: '#'
-          versionSegment: '5.6'
-        - version: '5.5.9'
-          displayVersion: '5.5.9'
+          versionSegment: ''
+        - version: '1.0.0'
+          displayVersion: '1.0.0'
           url: '#'
-          versionSegment: '5.5'
+          versionSegment: '1.0'
       navigation:
         - root: true
           items:
             - content: Overview
               url: '/index.html'
-            - content: Concepts
-              url: '#'
+            - content: Samples
+              url: '/samples/index.html'
               items:
-                - content: Purpose
-                  url: '#'
-                - content: Dependencies
-                  url: '#'
+                - content: Content
+                  url: '/samples/content/index.html'
+                - content: Edge cases
+                  url: '/samples/edge-cases/index.html'
+                - content: 404
+                  url: '/404.html'
+  baz:
+    1.0.0:
+      home: true
+      title: Spring Baz
+      relativeSrcPath: index.adoc
+      editUrl: http://example.com/project-xyz/blob/master/index.adoc
+      component:
+        title: Spring Baz
+        url: '#'
+        versions:
+          - *baz_latest_version
+      componentVersion: *baz_latest_version
+      navigation:
+        - root: true
+          items:
+            - content: Baz
+              url: '/baz/index.html'

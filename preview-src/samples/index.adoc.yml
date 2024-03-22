@@ -1,9 +1,13 @@
-url: /index.html
+url: /samples/index.html
 component:
   name: foobar
+  url: '#'
 version: '2.0.0'
 latest:
-  url: '/index.html'
+  url: '/samples/index.html'
+  version: '2.0.0'
+  displayVersion: '2.0.0'
+  title: Spring Foobar
 previous:
   content: Quickstart
   url: '#'
@@ -16,6 +20,6 @@ breadcrumbs:
   - content: Spring Foobar
     url: '#'
     urlType: fragment
-  - content: Overview
+  - content: Samples
     url: '#'
     urlType: fragment
