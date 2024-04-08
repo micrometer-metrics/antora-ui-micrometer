@@ -85,3 +85,7 @@ footer.footer img.dark {
 mark {
   background: #5accc2;
 }
+
+body.status-404 h1.page {
+  color: #1ba89c;
+}
