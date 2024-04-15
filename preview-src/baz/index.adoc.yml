@@ -1,9 +1,7 @@
-url: /search.html
+url: /baz/index.html
 component:
-  name: foobar
-version: '2.0.0'
-latest:
-  url: '/index.html'
+  name: baz
+version: '1.0.0'
 previous:
   content: Quickstart
   url: '#'
@@ -13,9 +11,6 @@ next:
   url: '#'
   urlType: 'internal'
 breadcrumbs:
-  - content: Spring Foobar
-    url: '#'
-    urlType: fragment
-  - content: Overview
+  - content: Spring Baz
     url: '#'
     urlType: fragment

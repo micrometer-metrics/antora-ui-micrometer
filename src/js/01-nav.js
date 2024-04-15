@@ -8,12 +8,17 @@
   var navToggle1 = document.querySelector('#nav-toggle-1')
   var navToggle2 = document.querySelector('#nav-toggle-2')
   var isNavOpen = window.localStorage && window.localStorage.getItem('sidebar') === 'open'
-
-  navToggle1.addEventListener('click', showNav)
-  navToggle2.addEventListener('click', showNav)
-  navContainer.addEventListener('click', trapEvent)
-
-  var menuPanel = navContainer.querySelector('[data-panel=menu]')
+  if (navToggle1) {
+    navToggle1.addEventListener('click', showNav)
+  }
+  if (navToggle2) {
+    navToggle2.addEventListener('click', showNav)
+  }
+  var menuPanel
+  if (navContainer) {
+    navContainer.addEventListener('click', trapEvent)
+    menuPanel = navContainer.querySelector('[data-panel=menu]')
+  }
   if (!menuPanel) return
   var nav = navContainer.querySelector('.nav')
 
@@ -26,6 +31,15 @@
     menuPanel.scrollTop = 0
   }
 
+  var currentActivePageItem = menuPanel.querySelector('.nav-item.is-current-page.is-active')
+  if (currentActivePageItem && currentActivePageItem.querySelector('.nav-item-toggle')) {
+    currentActivePageItem.querySelector('.nav-link').addEventListener('click', function (e) {
+      currentActivePageItem.querySelector('.nav-item-toggle').click()
+      e.preventDefault()
+      return false
+    })
+  }
+
   find(menuPanel, '.nav-item-toggle').forEach(function (btn) {
     var li = btn.parentElement
     btn.addEventListener('click', toggleActive.bind(li))
@@ -35,8 +49,6 @@
       navItemSpan.addEventListener('click', toggleActive.bind(li))
     }
   })
-
-  // var isOpen = false
 
   document.querySelector('#browse-version').addEventListener('click', function () {
     MicroModal.show('modal-versions', {
