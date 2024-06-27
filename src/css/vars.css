@@ -38,7 +38,7 @@
   --color-accent-1: #ebf2f2;
   --color-accent-1-hover: #d3dddd;
   --color-accent-2: #d7e7e7;
-  --color-accent-3: #6db33f;
+  --color-accent-3: #1ba89c;
   --body-font-color: #191e1e;
   --body-font-light-color: #273030;
   --body-font-dark-color: #141818;
@@ -128,7 +128,7 @@
 
   /* Navbar */
   --navbar-background: var(--body-background-color);
-  --navbar-font-color: #var(--body-font-color);
+  --navbar-font-color: var(--body-font-color);
   --navbar_hover-background: var(--navbar-background);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
@@ -224,7 +224,7 @@
   --z-index-nav: 1;
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
-  --z-index-navbar: 4;
+  --z-index-navbar: 100;
 }
 
 /* RESPONSIVE OVERRIDES */
