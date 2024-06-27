@@ -42,6 +42,12 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .doc {
+    padding-top: 60px;
+  }
+}
+
 .doc > h1.page:first-child + aside.toc.embedded {
   margin-top: -0.5rem;
 }
